@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fake Call</string>
+
+    <!-- Main -->
+    <string name="dashboard_title">Fake Call</string>
+    <string name="btn_fake_call_now">Fake Call Now</string>
+    <string name="btn_schedule_call">Schedule Call</string>
+    <string name="btn_manage_contacts">Manage Contacts</string>
+    <string name="selected_caller">Caller:</string>
+    <string name="no_contacts">No contacts yet — add one below.</string>
+
+    <!-- Contacts -->
+    <string name="contacts_title">My Contacts (max 5)</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="contact_name_hint">Caller Name (e.g. Mom, Boss)</string>
+    <string name="contact_limit_reached">You have reached the 5-contact limit.</string>
+    <string name="contact_saved">Contact saved.</string>
+    <string name="contact_deleted">Contact deleted.</string>
+    <string name="contact_name_empty">Name cannot be empty.</string>
+
+    <!-- Incoming call -->
+    <string name="incoming_call_label">Incoming call</string>
+    <string name="slide_to_answer">Slide to answer</string>
+    <string name="slide_to_decline">Slide to decline</string>
+
+    <!-- Active call -->
+    <string name="call_ended">Call ended (15 s limit reached)</string>
+    <string name="call_connected">Connected</string>
+
+    <!-- Schedule -->
+    <string name="schedule_title">Schedule Call</string>
+    <string name="schedule_delay_hint">Delay (seconds)</string>
+    <string name="btn_schedule">Schedule</string>
+    <string name="scheduled_ok">Call scheduled!</string>
+
+    <!-- Permissions -->
+    <string name="perm_overlay_title">Overlay Permission Required</string>
+    <string name="perm_overlay_msg">Please grant "Display over other apps" to show the fake call over the lock screen.</string>
+    <string name="perm_open_settings">Open Settings</string>
+    <string name="perm_cancel">Cancel</string>
+
+    <!-- Audio -->
+    <string name="audio_title">Call Audio Script</string>
+    <string name="btn_pick_audio">Pick Audio File</string>
+    <string name="btn_record_audio">Record Script</string>
+    <string name="audio_recording">Recording… tap again to stop</string>
+    <string name="audio_saved">Audio script saved.</string>
+    <string name="no_audio">No audio script selected — call will be silent.</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme base -->
+    <color name="bg_dark">#FF121212</color>
+    <color name="bg_surface">#FF1E1E1E</color>
+    <color name="bg_card">#FF2A2A2A</color>
+
+    <!-- Call screen colours matching stock Android -->
+    <color name="call_bg">#FF1A1A2E</color>
+    <color name="call_answer">#FF4CAF50</color>
+    <color name="call_decline">#FFF44336</color>
+    <color name="call_text_primary">#FFFFFFFF</color>
+    <color name="call_text_secondary">#B3FFFFFF</color>
+    <color name="call_timer">#80FFFFFF</color>
+
+    <!-- Accent -->
+    <color name="accent_blue">#FF1976D2</color>
+    <color name="accent_green">#FF4CAF50</color>
+    <color name="accent_red">#FFF44336</color>
+
+    <!-- Avatar placeholder -->
+    <color name="avatar_bg">#FF37474F</color>
+
+    <!-- UI elements -->
+    <color name="divider">#1FFFFFFF</color>
+    <color name="icon_tint">#FFFFFFFF</color>
+    <color name="hint_text">#66FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

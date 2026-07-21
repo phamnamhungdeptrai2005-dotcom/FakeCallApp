@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/call_bg">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/call_gradient_bg" />
+
+    <!-- Top: caller info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="80dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivActiveCallerAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person_placeholder"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvActiveCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unknown"
+            android:textColor="@color/call_text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvCallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call_connected"
+            android:textColor="@color/call_text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Timer -->
+        <TextView
+            android:id="@+id/tvCallTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/call_timer"
+            android:textSize="24sp"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+
+    <!-- Mid: call controls (mute, speaker, etc.) -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="32dp">
+
+        <!-- Mute -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:id="@+id/btnMute"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_mic_off"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="Mute" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Mute" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Keypad (decorative) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:id="@+id/btnKeypad"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_dialpad"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="Keypad" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Keypad" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Speaker -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:id="@+id/btnSpeaker"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_volume_up"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="Speaker" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Speaker" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Add call (decorative) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_person_add"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="Add call" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Add call" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Hold (decorative) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_pause"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="Hold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Hold" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- More (decorative) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_more_vert"
+                android:background="@drawable/circle_control_bg"
+                android:contentDescription="More" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="More" android:textColor="@color/call_text_secondary" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <!-- Bottom: end call button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp">
+
+        <ImageButton
+            android:id="@+id/btnEndCall"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_call_end"
+            android:background="@drawable/circle_red_bg"
+            android:contentDescription="End call" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End"
+            android:textColor="@color/call_text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
